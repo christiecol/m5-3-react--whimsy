@@ -1,22 +1,43 @@
 import React from "react";
 import styled from "styled-components";
+import { TweetProvider } from "./TweetContext";
 
 import Tweet from "./Tweet";
 
 import avatar from "../assets/carmen-sandiego.png";
 
 const App = () => {
+  // const {
+  //   date,
+  //   tweetContents,
+  //   displayName,
+  //   username,
+  //   avatarSrc,
+  //   numOfLikes,
+  //   numOfRetweets,
+  //   setIsRetweetedByCurrentUser,
+  //   setIsLikedByCurrentUser,
+  //   isRetweetedByCurrentUser,
+  //   isLikedByCurrentUser,
+  // } = useContext(TweetContext);
   return (
-    <Wrapper>
-      <Tweet
-        tweetContents="Where in the world am I?"
-        displayName="Carmen Sandiego ✨"
-        username="carmen-sandiego"
-        avatarSrc={avatar}
-        isRetweetedByCurrentUser={false}
-        isLikedByCurrentUser={false}
-      />
-    </Wrapper>
+    <TweetProvider>
+      <Wrapper>
+        <Tweet
+        // date={date}
+        // tweetContents={tweetContents}
+        // displayName={displayName}
+        // username={username}
+        // avatarSrc={avatarSrc}
+        // numOfLikes={numOfLikes}
+        // numOfRetweets={numOfRetweets}
+        // isRetweetedByCurrentUser={isRetweetedByCurrentUser}
+        // isLikedByCurrentUser={isLikedByCurrentUser}
+        // setIsRetweetedByCurrentUser={setIsRetweetedByCurrentUser}
+        // setIsLikedByCurrentUser={setIsLikedByCurrentUser}
+        />
+      </Wrapper>
+    </TweetProvider>
   );
 };
 
